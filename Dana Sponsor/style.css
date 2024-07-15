@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: fit-content;
+  overflow-y: scroll;
+  background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.headerPage {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(127, 181, 221, 1);
+  z-index: 1000;
+  box-shadow: 0 0 15px rgb(19, 19, 19);
+  border-bottom: 2px solid rgb(53, 53, 53);
+}
+
+.schProfile {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 10px;
+}
+
+.schProfile .schLogo {
+  max-width: 50px;
+  max-height: 75px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.schProfile .schName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: rgb(36, 36, 36);
+}
+
+.navHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+  margin: 20px;
+}
+
+.navHeader i {
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navigator {
+  display: none;
+}
+
+.visibleNav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 15px rgb(19, 19, 19);
+}
+
+.visibleNav a {
+  text-decoration: none;
+  text-align: left;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: rgb(50, 50, 50);
+  cursor: pointer;
+}
+
+.visibleNav .navDash {
+  padding: 0 0 20px 0;
+}
+
+.visibleNav .navProker {
+  padding: 0 0 20px 0;
+}
+
+.visibleNav a:hover {
+  color: rgba(127, 181, 221, 1);
+}
+
+.mainContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContent .titleUsaha {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+
+.mainContent .sponsorContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContent .sponsorContent .row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
+.mainContent .sponsorContent .row-1 .sponsor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7.5vh;
+}
+
+.mainContent .sponsorContent .row-1 .sponsor h2 {
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+.mainContent .sponsorContent .row-1 .sponsor .posterSponsor {
+  width: 90%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  border: 10px solid rgb(120, 60, 20);
+  box-shadow: 5px 10px 15px rgb(20, 20, 20);
+}
+
+.mainContent .sponsorContent .row-1 .sponsor .posterSponsor:hover {
+  transform: scale(105%);
+  transition: 0.5s;
+}
+
+@media (min-width: 1005px) {
+  .headerPage {
+    background-color: rgba(127, 181, 221, 1);
+  }
+
+  .schProfile {
+    width: 50%;
+  }
+
+  .schProfile .schName {
+    font-size: 22px;
+  }
+
+  .navHeader {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .navigator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .visibleNav {
+    display: none;
+  }
+
+  .navigator a {
+    text-decoration: none;
+    text-align: center;
+    text-transform: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    padding: 5px;
+    margin: 0px 40px 0px 40px;
+  }
+
+  .navigator a:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  #barsButton {
+    display: none;
+  }
+
+  .mainContent .titleUsaha {
+    font-size: 50px;
+    margin-bottom: 7.5vh;
+  }
+
+  .mainContent .sponsorContent .row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mainContent .sponsorContent .row-1 .sponsor {
+    width: 22.5%;
+    margin: 0 10vh 0 10vh;
+  }
+
+  .mainContent .sponsorContent .row-1 .sponsor .posterSponsor {
+    width: 100%;
+    height: 450px;
+  }
+}

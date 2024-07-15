@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: fit-content;
+  overflow-y: scroll;
+  background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.headerPage {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(127, 181, 221, 1);
+  z-index: 1000;
+  box-shadow: 0 0 15px rgb(19, 19, 19);
+  border-bottom: 2px solid rgb(53, 53, 53);
+}
+
+.schProfile {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 10px;
+}
+
+.schProfile .schLogo {
+  max-width: 50px;
+  max-height: 75px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.schProfile .schName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: rgb(36, 36, 36);
+}
+
+.navHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+  margin: 20px;
+}
+
+.navHeader i {
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navigator {
+  display: none;
+}
+
+.visibleNav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 15px rgb(19, 19, 19);
+}
+
+.visibleNav a {
+  text-decoration: none;
+  text-align: left;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: rgb(50, 50, 50);
+  cursor: pointer;
+}
+
+.visibleNav .navDash {
+  padding: 0 0 20px 0;
+}
+
+.visibleNav .navProker {
+  padding: 0 0 20px 0;
+}
+
+.visibleNav a:hover {
+  color: rgba(127, 181, 221, 1);
+}
+
+.mainContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.mainContent .contentBgr {
+  width: 100%;
+  height: 330vh;
+  object-fit: cover;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  z-index: -1;
+  opacity: 0.388;
+}
+
+.mainContent .prokerName {
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255),
+    0 0 5px rgb(255, 255, 255);
+  margin-top: 5vh;
+}
+
+.mainContent .logoPict {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  margin-top: 5vh;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgb(238, 40, 221), 0 0 10px rgb(238, 40, 221),
+    0 0 10px rgb(238, 40, 221);
+}
+
+.mainContent .logoPict:hover {
+  transform: scale(110%);
+  transition: 0.5s;
+}
+
+.mainContent .textProker {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.mainContent .textProker p {
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 5vh 0 5vh;
+}
+
+.mainContent .docsProker {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+}
+
+.mainContent .docsProker .docsTitle {
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  margin: 0 10vh 0 10vh;
+}
+
+.mainContent .docsProker .docsPict {
+  width: 80%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: 0 0 15px rgb(0, 0, 0);
+  margin-top: 5vh;
+}
+
+.mainContent .docsProker .docsPict .pict {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mainContent .docsProker .docsPict:hover {
+  transform: scale(105%);
+  transition: 0.5s;
+}
+
+.mainContent .docsProker .docsPoster {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.mainContent .docsProker .docsPoster .poster {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+.mainContent .docsProker .docsPoster .poster-1:hover {
+  transform: scale(105%);
+  transition: 0.5s;
+}
+
+.mainContent .docsProker .docsPoster .poster-2:hover {
+  transform: scale(105%);
+  transition: 0.5s;
+}
+
+.mainContent .docsProker .docsPoster .poster-2 {
+  margin-top: 5vh;
+}
+
+.mainContent .linkProker {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15vh 0 10vh 0;
+}
+
+.mainContent .linkProker .insProker {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  background-color: rgba(238, 40, 221, 0.9);
+  border-radius: 50px;
+  padding: 20px;
+}
+
+.mainContent .linkProker .insProker:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 10px rgb(238, 40, 221), 0 0 10px rgb(238, 40, 221),
+    0 0 10px rgb(238, 40, 221);
+  transition: 0.5s;
+  transform: scale(110%);
+}
+
+.mainContent .linkProker .insProker p {
+  align-items: right;
+  text-decoration: none;
+  text-transform: none;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.mainContent .linkProker .insProker:hover p {
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
+
+.mainContent .linkProker .insProker i {
+  justify-content: center;
+  align-items: center;
+  align-items: left;
+  text-decoration: none;
+  text-transform: none;
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  font-weight: 100;
+}
+
+.mainContent .linkProker .insProker:hover i {
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
+
+@media (min-width: 1005px) {
+  .headerPage {
+    background-color: rgba(127, 181, 221, 1);
+  }
+
+  .schProfile {
+    width: 50%;
+  }
+
+  .schProfile .schName {
+    font-size: 22px;
+  }
+
+  .navHeader {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .navigator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .visibleNav {
+    display: none;
+  }
+
+  .navigator a {
+    text-decoration: none;
+    text-align: center;
+    text-transform: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    padding: 5px;
+    margin: 0px 40px 0px 40px;
+  }
+
+  .navigator a:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  #barsButton {
+    display: none;
+  }
+
+  .mainContent .logoPict {
+    margin-top: 5vh;
+  }
+
+  .mainContent .contentBgr {
+    height: 310vh;
+  }
+
+  .mainContent .prokerName {
+    font-size: 50px;
+  }
+
+  .mainContent .textProker {
+    margin-top: 12.5vh;
+  }
+
+  .mainContent .textProker p {
+    font-size: 24px;
+    margin: 0 15vh 0 15vh;
+  }
+
+  .mainContent .docsProker {
+    margin-top: 25vh;
+  }
+
+  .mainContent .docsProker .docsTitle {
+    font-size: 40px;
+  }
+
+  .mainContent .docsProker .docsPict {
+    width: 70%;
+    height: 250px;
+    margin-top: 10vh;
+  }
+
+  .mainContent .docsProker .docsPoster {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20vh;
+  }
+
+  .mainContent .docsProker .docsPoster .poster {
+    width: 400px;
+    height: 500px;
+    border: 5px solid rgb(255, 255, 255);
+  }
+
+  .mainContent .docsProker .docsPoster .poster-1 {
+    margin-left: 31vh;
+  }
+
+  .mainContent .docsProker .docsPoster .poster-2 {
+    margin-top: 0;
+    margin-right: 31vh;
+  }
+
+  .mainContent .linkProker {
+    margin: 20vh 0 10vh 0;
+  }
+
+  .mainContent .linkProker .insProker p {
+    font-size: 20px;
+  }
+}
