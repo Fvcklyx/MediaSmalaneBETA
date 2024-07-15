@@ -1,0 +1,719 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: fit-content;
+  overflow-y: scroll;
+  background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.headerPage {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(127, 181, 221, 1);
+  z-index: 1000;
+  box-shadow: 0 0 15px rgb(19, 19, 19);
+  border-bottom: 2px solid rgb(53, 53, 53);
+}
+
+.schProfile {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 10px;
+}
+
+.schProfile .schLogo {
+  max-width: 50px;
+  max-height: 75px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.schProfile .schName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: rgb(36, 36, 36);
+}
+
+.navHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+  margin: 20px;
+}
+
+.navHeader i {
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navigator {
+  display: none;
+}
+
+.visibleNav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 15px rgb(19, 19, 19);
+}
+
+.visibleNav a {
+  text-decoration: none;
+  text-align: left;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: rgb(50, 50, 50);
+  cursor: pointer;
+}
+
+.visibleNav .navDash {
+  padding: 0 0 20px 0;
+}
+
+.visibleNav .navProker {
+  padding: 0 0 20px 0;
+}
+
+.visibleNav a:hover {
+  color: rgba(127, 181, 221, 1);
+}
+
+.dashboardPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  padding-top: 8vh;
+}
+
+.dashboardPage .dashBgr {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.dashboardPage .dashLogo {
+  width: 20%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashLogo .schDashLogo {
+  width: 200px;
+  height: 220px;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.dashboardPage .dashText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+}
+
+.dashText h2,
+.dashText p {
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 255, 255, 1);
+}
+
+.dashText h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 100px 0 20px 0;
+}
+
+.dashText p {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.profilePage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profilePage .profileBgr {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  z-index: -2;
+  opacity: 0.5;
+}
+
+.profilePage .osisProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+}
+
+.osisProfile h2,
+.osisProfile p {
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.osisProfile h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.osisProfile p {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px;
+}
+
+.structurePage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.structurePage h2 {
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  font-weight: 600;
+  margin: 15vh 30px 12vh 30px;
+}
+
+.structurePage .structureContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.structureContent .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.structureContent .content-left {
+  margin-bottom: 10vh;
+}
+
+.structureContent .content .osisV {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .osisV .osisV-pict {
+  width: 120px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px rgb(20, 20, 20);
+}
+
+.content .osisV .osisV-pict:hover {
+  transform: scale(115%);
+  transition: 0.5s;
+}
+
+.content .osisV .identity {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content .osisV .identity h3,
+.content .osisV .identity p {
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.content .osisV .identity h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.content .osisV .identity p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: rgb(70, 70, 70);
+}
+
+.content .osisV .identity a {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.content .osisV .identity a i {
+  align-items: center;
+  text-decoration: none;
+  text-transform: none;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 200;
+}
+
+.content .osisV .identity a p {
+  align-items: center;
+  text-decoration: none;
+  text-transform: none;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.content .osisV .identity a p:hover {
+  color: rgba(127, 181, 221, 1);
+}
+
+.ketos,
+.waketos-1,
+.waketos-2,
+.sektum,
+.sekre-1,
+.sekre-2,
+.bendahara-umum,
+.bendahara-1,
+.sekbid-1,
+.sekbid-2,
+.sekbid-3,
+.sekbid-4,
+.sekbid-5,
+.sekbid-6,
+.sekbid-7,
+.sekbid-8,
+.sekbid-9 {
+  margin-bottom: 10vh;
+}
+
+.sekbid-10 {
+  margin-bottom: 15vh;
+}
+
+.footerPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+}
+
+.footerPage .allInformation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerPage .allInformation img {
+  display: none;
+}
+
+.footerPage .allInformation .aboutUs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.footerPage .allInformation .aboutUs h2 {
+  align-items: center;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.footerPage .allInformation .aboutUs h4 {
+  align-items: center;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.footerPage .allInformation .aboutUs p {
+  align-items: center;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.footerPage .allInformation .aboutUs p i {
+  margin-right: 5px;
+}
+
+.footerPage .allInformation .socialMedia {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.footerPage .allInformation .socialMedia h2 {
+  align-items: center;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.footerPage .allInformation .socialMedia a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.footerPage .allInformation .socialMedia a i {
+  margin-right: 5px;
+}
+
+.footerPage .copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerPage .copyright h3 {
+  align-items: center;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  margin: 5vh 0 2.5vh 0;
+}
+
+@media (min-width: 1005px) {
+  .headerPage {
+    background-color: rgba(127, 181, 221, 1);
+  }
+
+  .schProfile {
+    width: 50%;
+  }
+
+  .schProfile .schName {
+    font-size: 22px;
+  }
+
+  .navHeader {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .navigator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .visibleNav {
+    display: none;
+  }
+
+  .navigator a {
+    text-decoration: none;
+    text-align: center;
+    text-transform: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    padding: 5px;
+    margin: 0px 40px 0px 40px;
+  }
+
+  .navigator a:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  #barsButton {
+    display: none;
+  }
+
+  .dashboardPage {
+    flex-direction: row-reverse;
+  }
+
+  .dashboardPage .dashLogo {
+    width: 40%;
+    justify-content: center;
+  }
+
+  .dashLogo .schDashLogo {
+    width: 300px;
+    height: 320px;
+  }
+
+  .dashboardPage .dashText {
+    display: flex;
+    width: 60%;
+  }
+
+  .dashText h2,
+  .dashText p {
+    text-align: center;
+  }
+
+  .dashText h2 {
+    font-size: 50px;
+    margin: 0 0 10px 0;
+  }
+
+  .dashText p {
+    font-size: 36px;
+  }
+
+  .profilePage .osisProfile {
+    width: 50%;
+  }
+
+  .osisProfile h2 {
+    margin-bottom: 30px;
+    font-size: 42px;
+  }
+
+  .osisProfile p {
+    font-size: 26px;
+    margin-top: 10px;
+  }
+
+  .structurePage h2 {
+    font-size: 40px;
+    margin: 15vh 0 12vh 0;
+  }
+
+  .structurePage .structureContent {
+    flex-direction: row;
+  }
+
+  .structureContent .content {
+    width: 50%;
+    margin-left: 15vh;
+  }
+
+  .structureContent .content-left {
+    margin-bottom: 0;
+  }
+
+  .structureContent .content .osisV {
+    flex-direction: row;
+  }
+
+  .content .osisV .osisV-pict {
+    margin-right: 25px;
+    margin-bottom: 0;
+  }
+
+  .content .osisV .osisV-pict:hover {
+    transform: scale(120%);
+  }
+
+  .content .osisV .identity h3,
+  .content .osisV .identity p {
+    text-align: left;
+  }
+
+  .content .osisV .identity h3 {
+    font-size: 28px;
+  }
+
+  .content .osisV .identity p {
+    font-size: 18px;
+  }
+
+  .content .osisV .identity a {
+    justify-content: left;
+  }
+
+  .ketos,
+  .waketos-1,
+  .waketos-2,
+  .sektum,
+  .sekre-1,
+  .sekre-2,
+  .bendahara-umum,
+  .bendahara-1 {
+    margin-bottom: 13.9vh;
+  }
+
+  .sekbid-10 {
+    margin-bottom: 15vh;
+  }
+
+  .footerPage .allInformation {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footerPage .allInformation img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 5vh 10vh 0 5vh;
+  }
+
+  .footerPage .allInformation .aboutUs {
+    justify-content: left;
+    align-items: start;
+    margin-right: 20vh;
+  }
+
+  .footerPage .allInformation .aboutUs h2 {
+    align-items: start;
+    text-align: left;
+  }
+
+  .footerPage .allInformation .aboutUs h4 {
+    align-items: start;
+    text-align: left;
+    margin-top: 15px;
+  }
+
+  .footerPage .allInformation .aboutUs p {
+    align-items: start;
+    text-align: left;
+    padding-right: 10vh;
+  }
+
+  .footerPage .allInformation .aboutUs p i {
+    margin-right: 5px;
+  }
+
+  .footerPage .allInformation .socialMedia {
+    justify-content: left;
+    align-items: start;
+    margin-top: 5vh;
+  }
+
+  .footerPage .copyright h3 {
+    font-size: 18px;
+    margin-top: 7.5vh;
+  }
+}
